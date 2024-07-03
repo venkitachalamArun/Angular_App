@@ -1,9 +1,13 @@
 <h3 style="text-decoration: underline;">Customer</h3>
 <button type="button" style="margin: 10px;" class="btn btn-primary">Find All Customer</button>
 <button type="button" (click)="customerId($event)" class="btn btn-primary">Find  Customer</button>
-<input type="customer" ([ngModel])="customerValue"  style="width: 163px;" class="form-control" id="customerId" placeholder="Customer Id">
+<input type="customer"[(ngModel)]="customerValue"  style="width: 163px;" class="form-control" id="customerId" placeholder="Customer Id">
+<p >Input Value: {{ displayedValuecus }}</p>
+
 <br>
 <h3     style="text-decoration: underline;">Product</h3>
 <button type="button" style="margin: 10px;" class="btn btn-primary">Find All Customer</button>
 <button type="button" (click)="productId($event)" class="btn btn-primary">Find  Customer</button>
-<input type="product"  ([ngModel])="productValue" style="width: 163px;" class="form-control" id="customerId" placeholder="Product Id">
+<input type="product"  [(ngModel)]="productValue" style="width: 163px;" class="form-control" id="customerId" placeholder="Product Id">
+<p >Input Value: {{ displayedValuepor }}</p>
+

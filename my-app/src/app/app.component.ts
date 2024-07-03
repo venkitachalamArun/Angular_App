@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -12,13 +13,17 @@ export class AppComponent {
   title = 'my-app';
   productValue:string="";
   customerValue:string="";
+  displayedValuecus: string | null = null;
+  displayedValuepor: string | null = null;
+
   productId($event: any){
-    this.productValue;
+    this.displayedValuepor = this.productValue;
+
     console.log($event);
 
   }
   customerId($event: any){
-    this.customerValue;
+    this.displayedValuecus = this.customerValue;
     console.log($event);
 
   }
